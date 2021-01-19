@@ -1,0 +1,36 @@
+lioraryepaz, omer_van
+Lior Paz (206240996), Omer Vandsburger (204153688)
+EX: 2
+
+FILES:
+README -- details + questions
+uthreads.cpp -- provides functions to maintain threads
+Makefile -- for the command make creates the library libuthreads.a
+
+REMARKS:
+Learned a lot :)
+
+ANSWERS:
+
+Question 1:
+user-level threads package can be implemented on an operating system that does not support threads.
+All operating systems used to fall into this category, and even now some still do.
+
+Question 2:
+The advantages of creating new process and not kernel lavel threads - threads has no protection
+between themselves, and all threads can access every address in the task. threads are not
+independent of one another.
+disadvantages of creating new process and not kernel lavel threads - Because threads can share
+common data, they do not need to use interprocess communication. also, They only need a stack and
+storage for registers therefore, threads are cheap to create
+
+Question 3:
+Keyboard sends interrupts that writes the command in shell. shell command call kill() system call
+that sends SIGKILL/SIGTERM (SIGTERM can be handleld by a
+handler, against SIGKILL) to the process according to its ID.
+
+Question 4:
+Virtual time decrements only when the process is executing, and delivers SIGVTALRM upon expiration.
+needed for thread designing.
+real time decrements in real time, and delivers SIGALRM upon expiration. needed for clock
+applications.
